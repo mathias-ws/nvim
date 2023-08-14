@@ -5,5 +5,5 @@ require("mws.lazy")
 
 -- Configure plugins
 require("mws.colorscheme")
---require("mws.telescope")
+require("mws.telescope")
 
