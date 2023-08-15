@@ -17,7 +17,11 @@ lsp.omnifunc.setup({
 lsp.setup_servers({'tsserver', 'eslint'})
 
 lsp.ensure_installed({
-  "pyright"  
+    "pyright", 
+})
+
+require("lspconfig").pyright.setup({
+    filetypes = {"python"},
 })
 
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
