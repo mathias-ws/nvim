@@ -28,3 +28,19 @@ require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
 
+
+
+
+
+-- Configuring cmp
+local cmp = require('cmp')
+
+cmp.setup({
+    mapping = {
+        ['<CR>'] = cmp.mapping.confirm({select = true}),
+        ['<Tab>'] = cmp.mapping.confirm({select = true}),
+    }
+})
+
+
+
