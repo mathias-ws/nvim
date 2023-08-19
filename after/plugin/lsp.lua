@@ -18,10 +18,20 @@ lsp.setup_servers({'tsserver', 'eslint'})
 
 lsp.ensure_installed({
     "pyright", 
+    "ruff_lsp",
+    "ansiblels",
+    "lua_ls"
 })
 
 require("lspconfig").pyright.setup({
     filetypes = {"python"},
+    settings = {
+        python = {
+            analysis = {
+                venvPath = "./venv"
+            }
+        }
+    }
 })
 
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
