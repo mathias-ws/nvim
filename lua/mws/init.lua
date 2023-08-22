@@ -1,6 +1,8 @@
 require("mws.remap")
 require("mws.basic_config")
 
+--require("mws.venv")
+
 require("mws.lazy")
 
 -- Configure plugins

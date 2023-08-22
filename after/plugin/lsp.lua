@@ -17,7 +17,7 @@ lsp.omnifunc.setup({
 lsp.setup_servers({'tsserver', 'eslint'})
 
 lsp.ensure_installed({
-    "pyright", 
+    "pyright",
     "ruff_lsp",
     "ansiblels",
     "lua_ls"
@@ -36,30 +36,36 @@ require("lspconfig").pyright.setup({
 
 require("lspconfig").ansiblels.setup({
     filetypes = {
-        "yaml.ansible",
+       "yaml.ansible",
+  },
+  settings = {
+    ansible = {
+      ansible = {
+        path = "ansible",
+        useFullyQualifiedCollectionNames = true
+      },
+      ansibleLint = {
+        enabled = true,
+        path = "ansible-lint"
+      },
+      executionEnvironment = {
+        enabled = false
+      },
+      python = {
+        interpreterPath = "python"
+      },
+      completion = {
+          provideRedirectModules = true,
+          provideModuleOptionAliases = true
+      }
     },
-    settings = {
-        ansible = {
-            ansible = {
-                path = "ansible",
-                useFullyQualifiedCollectionNames = true
-            },
-            ansibleLint = {
-                enabled = true,
-                path = "ansible-lint"
-            },
-            executionEnvironment = {
-                enabled = false
-            },
-            python = {
-                interpreterPath = "python"
-            },
-            completion = {
-                provideRedirectModules = true,
-                provideModuleOptionAliases = true
-            }
-        },
-    },
+  },
+})
+
+vim.filetype.add({
+  pattern = {
+    [".*/tasks/.*.yaml"] = "yaml.ansible"
+  },
 })
 
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
