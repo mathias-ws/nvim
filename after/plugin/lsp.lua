@@ -62,12 +62,6 @@ require("lspconfig").ansiblels.setup({
   },
 })
 
-vim.filetype.add({
-  pattern = {
-    [".*/tasks/.*.yaml"] = "yaml.ansible"
-  },
-})
-
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
