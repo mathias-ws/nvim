@@ -17,20 +17,54 @@ lsp.omnifunc.setup({
 lsp.setup_servers({'tsserver', 'eslint'})
 
 lsp.ensure_installed({
-    "pyright", 
+    "pyright",
+    "ruff_lsp",
+    "ansiblels",
+    "lua_ls"
 })
 
 require("lspconfig").pyright.setup({
     filetypes = {"python"},
+    settings = {
+        python = {
+            analysis = {
+                venvPath = "./venv"
+            }
+        }
+    }
+})
+
+require("lspconfig").ansiblels.setup({
+    filetypes = {
+       "yaml.ansible",
+  },
+  settings = {
+    ansible = {
+      ansible = {
+        path = "ansible",
+        useFullyQualifiedCollectionNames = true
+      },
+      ansibleLint = {
+        enabled = true,
+        path = "ansible-lint"
+      },
+      executionEnvironment = {
+        enabled = false
+      },
+      python = {
+        interpreterPath = "python"
+      },
+      completion = {
+          provideRedirectModules = true,
+          provideModuleOptionAliases = true
+      }
+    },
+  },
 })
 
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
-
-
-
-
 
 -- Configuring cmp
 local cmp = require('cmp')
