@@ -1,4 +1,5 @@
 return {
+    "mhinz/vim-signify",
 	"tpope/vim-fugitive",
 	"navarasu/onedark.nvim",
 	"williamboman/mason.nvim",
