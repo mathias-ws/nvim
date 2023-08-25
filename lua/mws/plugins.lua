@@ -1,4 +1,6 @@
 return {
+    "mhinz/vim-signify",
+	"tpope/vim-fugitive",
     "pearofducks/ansible-vim",
     "tpope/vim-fugitive",
 	"navarasu/onedark.nvim",
