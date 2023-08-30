@@ -9,7 +9,12 @@ end)
 
 require("telescope").setup({
     defaults = {
-        file_ignore_patterns = { "venv", "virt_env", "env" }
+        file_ignore_patterns = { "venv", "virt_env", "env", ".idea", ".git" }
+    },
+    pickers = {
+        find_files = {
+            hidden = true
+        }
     }
 })
 
