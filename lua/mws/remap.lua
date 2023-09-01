@@ -7,4 +7,6 @@ vim.api.nvim_set_keymap('n', '<leader>t', ':belowright split | terminal<CR>', { 
 -- pv for explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- Exit terminal mode with esc
+vim.keymap.set("t", "<esc>", "<C-\\><C-n>")
 
