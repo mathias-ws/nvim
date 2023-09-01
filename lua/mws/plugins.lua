@@ -1,20 +1,28 @@
 return {
     "mhinz/vim-signify",
-	"tpope/vim-fugitive",
-    "pearofducks/ansible-vim",
     "tpope/vim-fugitive",
-	"navarasu/onedark.nvim",
-	"williamboman/mason.nvim",
-	"neovim/nvim-lspconfig",
-	"williamboman/mason-lspconfig.nvim",
-	"nvim-telescope/telescope.nvim",
-	"nvim-treesitter/nvim-treesitter",
-	"nvim-treesitter/playground",
-	"mbbill/undotree",
-	"nvim-lua/plenary.nvim",
-	"VonHeikemen/lsp-zero.nvim",
-	"neovim/nvim-lspconfig",
-	"hrsh7th/nvim-cmp",
-	"hrsh7th/cmp-nvim-lsp",
-	"L3MON4D3/LuaSnip",
+    "pearofducks/ansible-vim",
+    "navarasu/onedark.nvim",
+    "nvim-treesitter/nvim-treesitter",
+    "mbbill/undotree",
+    {
+        'VonHeikemen/lsp-zero.nvim',
+        dependencies = {
+            {'neovim/nvim-lspconfig'},             -- Required
+            {'williamboman/mason.nvim'},           -- Optional
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},     -- Required
+            {'hrsh7th/cmp-nvim-lsp'}, -- Required
+            {'L3MON4D3/LuaSnip'},     -- Required
+        }
+    },
+    {
+        "nvim-telescope/telescope.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "BurntSushi/ripgrep",
+        },
+    },
 }
