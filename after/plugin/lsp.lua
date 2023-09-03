@@ -34,6 +34,17 @@ require("lspconfig").pyright.setup({
     }
 })
 
+require("lspconfig").ruff_lsp.setup({
+    on_attatch = function (client, bufnr)
+        client.server_capabilities.hoverProvider = false
+    end,
+    init_options = {
+    settings = {
+      args = {},
+    }
+  }
+})
+
 require("lspconfig").ansiblels.setup({
     filetypes = {
        "yaml.ansible",
