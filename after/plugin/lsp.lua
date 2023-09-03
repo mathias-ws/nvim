@@ -52,7 +52,7 @@ require("lspconfig").ansiblels.setup({
         enabled = false
       },
       python = {
-        interpreterPath = "python"
+        interpreterPath = "python3"
       },
       completion = {
           provideRedirectModules = true,
