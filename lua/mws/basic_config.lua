@@ -2,7 +2,7 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
--- Sets propper indents
+-- Sets proper indents
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -29,4 +29,7 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+-- Spell checking
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
 
