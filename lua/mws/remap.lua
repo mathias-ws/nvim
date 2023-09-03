@@ -10,3 +10,6 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- Exit terminal mode with esc
 vim.keymap.set("t", "<esc>", "<C-\\><C-n>")
 
+-- Format Python files using black with leader f
+vim.keymap.set("n", "<leader>f", [[<cmd>silent !black %<CR>]], { noremap = true, silent = true })
+

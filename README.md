@@ -9,5 +9,5 @@ These operative system packages are required for all the plugins and functionall
 * NPM
 * ripgrep
 * git
-
+* black (python formatter)
 
