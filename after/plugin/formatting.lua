@@ -5,6 +5,7 @@ conform.setup({
     html = { "prettier" },
     json = { "prettier" },
     yaml = { "prettier" },
+    xml = { "prettier" },
     markdown = { "prettier" },
     lua = { "stylua" },
     python = { "isort", "black" },
