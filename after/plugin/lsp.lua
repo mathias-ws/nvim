@@ -37,6 +37,7 @@ mason_tool_installer.setup({
     "yamllint",
     "markdownlint",
     "jq",
+    "debugpy",
   },
 })
 
