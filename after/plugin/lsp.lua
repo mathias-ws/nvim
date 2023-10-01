@@ -36,6 +36,7 @@ mason_tool_installer.setup({
     "jsonlint",
     "yamllint",
     "markdownlint",
+    "jq",
   },
 })
 

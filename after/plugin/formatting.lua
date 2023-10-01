@@ -3,7 +3,7 @@ local conform = require("conform")
 conform.setup({
   formatters_by_ft = {
     html = { "prettier" },
-    json = { "prettier" },
+    json = { "jq" },
     yaml = { "prettier" },
     xml = { "prettier" },
     markdown = { "prettier" },
