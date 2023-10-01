@@ -12,7 +12,7 @@ vim.keymap.set("n", "<leader>vh", telescope.help_tags, {})
 
 require("telescope").setup({
   defaults = {
-    file_ignore_patterns = { "venv", "virt_env", "env", ".idea", ".git" },
+    file_ignore_patterns = { "venv", "virt_env", "env", ".idea", ".git/" },
   },
   pickers = {
     find_files = {
