@@ -21,6 +21,7 @@ lsp.ensure_installed({
   "pyright",
   "ansiblels",
   "lua_ls",
+  "ruff_lsp",
 })
 
 mason_tool_installer.setup({
@@ -31,6 +32,10 @@ mason_tool_installer.setup({
     "black",
     "isort",
     "mypy",
+    "ansible-lint",
+    "jsonlint",
+    "yamllint",
+    "markdownlint",
   },
 })
 
@@ -46,6 +51,7 @@ require("lspconfig").pyright.setup({
 })
 
 require("lspconfig").ruff_lsp.setup({
+  filetypes = { "python" },
   on_attatch = function(client, bufnr)
     client.server_capabilities.hoverProvider = false
   end,
