@@ -10,7 +10,6 @@ vim.opt.expandtab = true
 
 vim.opt.wrap = false
 
-
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
@@ -30,6 +29,5 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 -- Spell checking
-vim.opt.spelllang = 'en_us'
+vim.opt.spelllang = "en_us"
 vim.opt.spell = true
-
