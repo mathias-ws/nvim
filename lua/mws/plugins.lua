@@ -1,10 +1,27 @@
 return {
-  "mhinz/vim-signify",
-  "tpope/vim-fugitive",
-  "pearofducks/ansible-vim",
-  "navarasu/onedark.nvim",
-  "nvim-treesitter/nvim-treesitter",
-  "mbbill/undotree",
+  {
+    "navarasu/onedark.nvim",
+  },
+  {
+    "mhinz/vim-signify",
+    event = { "BufReadPre", "BufNewFile" },
+  },
+  {
+    "pearofducks/ansible-vim",
+    event = { "BufReadPre", "BufNewFile" },
+  },
+  {
+    "mbbill/undotree",
+    event = { "BufReadPre", "BufNewFile" },
+  },
+  {
+    "tpope/vim-fugitive",
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    event = { "BufReadPre", "BufNewFile" },
+    build = ":TSUpdate",
+  },
   {
     "VonHeikemen/lsp-zero.nvim",
     dependencies = {
@@ -29,6 +46,7 @@ return {
     "danymat/neogen",
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = true,
+    lazy = true,
   },
   {
     "stevearc/conform.nvim",
@@ -47,6 +65,7 @@ return {
   {
     "mfussenegger/nvim-dap-python",
     ft = "python",
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       "mfussenegger/nvim-dap",
       "rcarriga/nvim-dap-ui",
