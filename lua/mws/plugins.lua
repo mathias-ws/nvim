@@ -69,8 +69,13 @@ return {
     dependencies = {
       "mfussenegger/nvim-dap",
       "rcarriga/nvim-dap-ui",
+    },
+  },
+  {
+    "nvim-neotest/neotest-python",
+    dependencies = {
       "nvim-neotest/neotest",
-      "nvim-neotest/neotest-python",
+      "nvim-lua/plenary.nvim",
     },
   },
 }
