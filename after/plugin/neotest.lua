@@ -7,6 +7,9 @@ require("neotest").setup({
       },
       args = { "--log-level", "DEBUG", "--quiet" },
       runner = "unittest",
+      pythonPath = function()
+        return os.getenv("VIRTUAL_ENV") .. "/bin/python"
+      end,
     }),
   },
 })
