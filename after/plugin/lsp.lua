@@ -53,18 +53,6 @@ require("lspconfig").pyright.setup({
   },
 })
 
-require("lspconfig").ruff_lsp.setup({
-  filetypes = { "python" },
-  on_attatch = function(client, bufnr)
-    client.server_capabilities.hoverProvider = false
-  end,
-  init_options = {
-    settings = {
-      args = {},
-    },
-  },
-})
-
 require("lspconfig").yamlls.setup({
   settings = {
     yaml = {
