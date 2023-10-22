@@ -21,7 +21,6 @@ lsp.ensure_installed({
   "pyright",
   "ansiblels",
   "lua_ls",
-  "ruff_lsp",
 })
 
 mason_tool_installer.setup({
