@@ -5,7 +5,6 @@ require("neotest").setup({
         justMyCode = false,
         console = "integratedTerminal",
       },
-      args = { "--log-level", "DEBUG", "--quiet" },
       runner = "unittest",
       pythonPath = function()
         return os.getenv("VIRTUAL_ENV") .. "/bin/python"
