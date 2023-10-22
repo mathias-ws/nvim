@@ -22,6 +22,7 @@ lsp.ensure_installed({
   "ansiblels",
   "lua_ls",
   "yamlls",
+  "terraformls",
 })
 
 mason_tool_installer.setup({
@@ -91,6 +92,10 @@ require("lspconfig").yamlls.setup({
       hover = true,
     },
   },
+})
+
+require("lspconfig").terraformls.setup({
+  filetypes = { "terraform", "tf" },
 })
 
 require("lspconfig").ansiblels.setup({
