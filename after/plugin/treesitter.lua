@@ -20,6 +20,7 @@ require("nvim-treesitter.configs").setup({
     "hcl",
     "html",
     "latex",
+    "markdown",
     "markdown_inline",
     "regex",
     "requirements",
