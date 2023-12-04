@@ -23,6 +23,7 @@ mason_lspconfig.setup({
     "lua_ls",
     "yamlls",
     "terraformls",
+    "gopls",
   },
 })
 
