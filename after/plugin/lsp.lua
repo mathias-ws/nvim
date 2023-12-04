@@ -1,11 +1,10 @@
 local lsp = require("lsp-zero")
 local mason_tool_installer = require("mason-tool-installer")
+local mason_lspconfig = require("mason-lspconfig")
 
 lsp.preset("recommended")
 
 lsp.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
   lsp.default_keymaps({ buffer = bufnr })
 end)
 
@@ -17,12 +16,14 @@ lsp.omnifunc.setup({
 
 lsp.setup_servers({ "tsserver", "eslint" })
 
-lsp.ensure_installed({
-  "pyright",
-  "ansiblels",
-  "lua_ls",
-  "yamlls",
-  "terraformls",
+mason_lspconfig.setup({
+  ensure_installed = {
+    "pyright",
+    "ansiblels",
+    "lua_ls",
+    "yamlls",
+    "terraformls",
+  },
 })
 
 mason_tool_installer.setup({
