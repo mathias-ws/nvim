@@ -4,7 +4,7 @@ obsidian.setup({
   workspaces = {
     {
       name = "skole",
-      path = "/Users/mathias/Library/Mobile Documents/iCloud~md~obsidian/Documents/skole",
+      path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/skole",
     },
   },
   detect_cwd = false,
