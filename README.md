@@ -10,4 +10,3 @@ functionality to work. Other dependencies are automatically installed by Mason.
 - NPM
 - ripgrep
 - git
-- delve
