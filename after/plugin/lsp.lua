@@ -41,6 +41,7 @@ mason_tool_installer.setup({
     "markdownlint",
     "jq",
     "debugpy",
+    "delve",
   },
 })
 

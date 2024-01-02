@@ -111,4 +111,7 @@ return {
       "hrsh7th/nvim-cmp",
     },
   },
+  {
+    "leoluz/nvim-dap-go",
+  },
 }
