@@ -79,6 +79,13 @@ return {
     },
   },
   {
+    "nvim-neotest/neotest-go",
+    dependencies = {
+      "nvim-neotest/neotest",
+      "nvim-lua/plenary.nvim",
+    },
+  },
+  {
     "ray-x/go.nvim",
     dependencies = { -- optional packages
       "ray-x/guihua.lua",
