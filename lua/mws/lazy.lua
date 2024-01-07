@@ -11,4 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("mws.plugins")
+require("lazy").setup({
+  import = "mws.plugins",
+  change_detection = {
+    notify = false,
+  },
+})
