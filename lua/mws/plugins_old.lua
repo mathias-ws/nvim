@@ -11,10 +11,6 @@ return {
     event = { "BufReadPre", "BufNewFile" },
   },
   {
-    "mbbill/undotree",
-    event = { "BufReadPre", "BufNewFile" },
-  },
-  {
     "tpope/vim-fugitive",
   },
   {
