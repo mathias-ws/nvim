@@ -4,11 +4,6 @@ return {
 
     ft = "python",
 
-    event = {
-      "BufReadPre",
-      "BufNewFile",
-    },
-
     dependencies = {
       "mfussenegger/nvim-dap",
       "rcarriga/nvim-dap-ui",
@@ -80,11 +75,6 @@ return {
     "leoluz/nvim-dap-go",
 
     ft = "go",
-
-    event = {
-      "BufReadPre",
-      "BufNewFile",
-    },
 
     dependencies = {
       "mfussenegger/nvim-dap",

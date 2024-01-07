@@ -6,11 +6,6 @@ return {
     "go",
   },
 
-  event = {
-    "BufReadPre",
-    "BufNewFile",
-  },
-
   dependencies = {
     "nvim-neotest/neotest",
     "nvim-lua/plenary.nvim",

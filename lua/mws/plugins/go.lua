@@ -29,7 +29,5 @@ return {
     })
   end,
 
-  event = { "CmdlineEnter" },
-
   ft = { "go", "gomod" },
 }
