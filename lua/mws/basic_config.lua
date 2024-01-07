@@ -26,8 +26,13 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "120"
 
 -- Spell checking
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
+
+-- Netrw
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
