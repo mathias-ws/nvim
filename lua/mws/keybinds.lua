@@ -49,3 +49,9 @@ else
   vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
   vim.keymap.set("n", "<leader>Y", [["+Y]])
 end
+
+-- Using tab for indentation
+vim.api.nvim_set_keymap("n", "<Tab>", ">>_", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-Tab>", "<<_", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<Tab>", ">gv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<S-Tab>", "<gv", { noremap = true, silent = true })
