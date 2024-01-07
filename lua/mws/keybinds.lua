@@ -24,3 +24,28 @@ vim.cmd([[
 vim.cmd([[
   autocmd FileType python,yaml nnoremap <buffer><leader>C :%s/^/# /<CR>
 ]])
+
+-- Move lines in visual mode
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Keeps the cursor in the middle of the screen when scrolling half-pages
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Centers the screen when going through search results
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- Copy to system clipboard
+local os_name = vim.loop.os_uname().sysname
+
+if os_name == "Darwin" then
+  -- macOS specific keybindings
+  vim.keymap.set({ "n", "v" }, "<leader>y", [["*y]])
+  vim.keymap.set("n", "<leader>Y", [["*Y]])
+else
+  -- Linux specific keybindings
+  vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+  vim.keymap.set("n", "<leader>Y", [["+Y]])
+end
