@@ -23,6 +23,7 @@ return {
         "gowork",
         "gosum",
         "python",
+        "toml",
         "sql",
         "yaml",
         "json",
