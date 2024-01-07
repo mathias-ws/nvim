@@ -1,17 +1,23 @@
-return {
-  "epwalsh/obsidian.nvim",
+local nvim_env = os.getenv("NVIM_ENV")
 
-  version = "*",
+if nvim_env == "work" then
+  return {}
+else
+  return {
+    "epwalsh/obsidian.nvim",
 
-  ft = "markdown",
+    version = "*",
 
-  event = {
-    "BufReadPre /Users/mathias/Library/Mobile Documents/iCloud~md~obsidian/Documents/**.md",
-    "BufNewFile /Users/mathias/Library/Mobile Documents/iCloud~md~obsidian/Documents/**.md",
-  },
+    ft = "markdown",
 
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "hrsh7th/nvim-cmp",
-  },
-}
+    event = {
+      "BufReadPre /Users/mathias/Library/Mobile Documents/iCloud~md~obsidian/Documents/**.md",
+      "BufNewFile /Users/mathias/Library/Mobile Documents/iCloud~md~obsidian/Documents/**.md",
+    },
+
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+  }
+end
