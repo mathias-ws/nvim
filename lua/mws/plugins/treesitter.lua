@@ -41,6 +41,7 @@ return {
         "vue",
         "csv",
         "java",
+        "diff",
       },
       sync_install = false,
       auto_install = true,
