@@ -214,8 +214,6 @@ return {
       })
     end
 
-    lsp.setup()
-
     -- Configuring cmp
     local cmp = require("cmp")
 
@@ -223,6 +221,7 @@ return {
       mapping = {
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
         ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+        ["<C-Space>"] = cmp.mapping.complete(),
       },
     })
   end,
