@@ -10,6 +10,7 @@ require("neotest").setup({
         return os.getenv("VIRTUAL_ENV") .. "/bin/python"
       end,
     }),
+    require("neotest-go"),
   },
 })
 
