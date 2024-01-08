@@ -162,6 +162,8 @@ return {
       },
     })
 
+    require("lspconfig").gopls.setup({})
+
     if nvim_env ~= "work" then
       require("lspconfig").terraformls.setup({
         filetypes = { "terraform", "tf" },
