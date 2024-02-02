@@ -71,7 +71,6 @@ return {
         ensure_installed = {
           "pyright",
           "ansiblels",
-          "lua_ls",
           "yamlls",
           "gopls",
         },
@@ -80,7 +79,6 @@ return {
       mason_tool_installer.setup({
         ensure_installed = {
           "prettier",
-          "stylua",
           "ruff",
           "black",
           "isort",
@@ -164,12 +162,14 @@ return {
       },
     })
 
-    require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
+    require("lspconfig").gopls.setup({})
 
     if nvim_env ~= "work" then
       require("lspconfig").terraformls.setup({
         filetypes = { "terraform", "tf" },
       })
+
+      require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 
       require("lspconfig").yamlls.setup({
         settings = {

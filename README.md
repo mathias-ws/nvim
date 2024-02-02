@@ -10,3 +10,12 @@ functionality to work. Other dependencies are automatically installed by Mason.
 - NPM
 - ripgrep
 - git
+
+## Work and personal configuration
+
+To separate concerns and to use only the needed plugins a work mode has been implemented.
+This has fewer plugins and LSPs. To activate it export the `NVIM_ENV` variable to `"work"`.
+
+```bash
+export NVIM_ENV="work"
+```
