@@ -101,6 +101,7 @@ return {
           "yamlls",
           "terraformls",
           "gopls",
+          "bashls",
         },
       })
 
@@ -168,6 +169,8 @@ return {
       require("lspconfig").terraformls.setup({
         filetypes = { "terraform", "tf" },
       })
+
+      require("lspconfig").bashls.setup({})
 
       require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 
