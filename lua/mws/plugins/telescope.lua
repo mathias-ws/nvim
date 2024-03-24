@@ -6,6 +6,8 @@ return {
     "BurntSushi/ripgrep",
   },
 
+  version = "*",
+
   config = function()
     require("telescope").setup({
       defaults = {

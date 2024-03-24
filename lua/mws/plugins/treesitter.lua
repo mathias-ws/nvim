@@ -6,6 +6,8 @@ return {
     "BufNewFile",
   },
 
+  version = "*",
+
   build = ":TSUpdate",
 
   config = function()
