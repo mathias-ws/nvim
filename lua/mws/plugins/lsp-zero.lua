@@ -121,6 +121,7 @@ return {
           "terraformls",
           "gopls",
           "bashls",
+          "texlab",
         },
       })
 
@@ -221,6 +222,8 @@ return {
           },
         },
       })
+
+      require("lspconfig").texlab.setup({})
     else
       require("lspconfig").yamlls.setup({
         settings = {
