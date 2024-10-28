@@ -107,8 +107,6 @@ return {
           "yamllint",
           "markdownlint",
           "jq",
-          "debugpy",
-          "delve",
         },
       })
     else
@@ -138,8 +136,6 @@ return {
           "yamllint",
           "markdownlint",
           "jq",
-          "debugpy",
-          "delve",
         },
       })
     end
