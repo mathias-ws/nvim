@@ -48,6 +48,8 @@ return {
         "csv",
         "java",
         "diff",
+        "latex",
+        "bibtex",
       },
       sync_install = false,
       auto_install = true,
