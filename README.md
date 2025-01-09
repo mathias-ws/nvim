@@ -11,6 +11,13 @@ functionality to work. Other dependencies are automatically installed by Mason.
 - ripgrep
 - git
 
+## Latex
+
+For latex to work the following MacOS packages must be installed:
+
+- brew install --cask skim
+- brew install --cask mactex-no-gui
+
 ## Work and personal configuration
 
 To separate concerns and to use only the needed plugins a work mode has been implemented.

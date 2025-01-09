@@ -120,6 +120,7 @@ return {
           "gopls",
           "bashls",
           "texlab",
+          "ltex",
         },
       })
 
@@ -220,6 +221,7 @@ return {
       })
 
       require("lspconfig").texlab.setup({})
+      require("lspconfig").ltex.setup({})
     else
       require("lspconfig").yamlls.setup({
         settings = {
