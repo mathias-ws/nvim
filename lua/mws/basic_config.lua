@@ -31,6 +31,7 @@ vim.opt.colorcolumn = "120"
 -- Spell checking
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
+vim.opt.spellsuggest:append("20")
 
 -- Netrw
 vim.g.netrw_browse_split = 0
