@@ -25,8 +25,7 @@ return {
     vim.keymap.set("n", "<leader>vh", telescope.help_tags, {})
     vim.keymap.set("n", "<leader>pf", telescope.find_files, {})
     vim.keymap.set("n", "<C-p>", telescope.git_files, {})
-    vim.keymap.set("n", "<leader>ps", function()
-      telescope.live_grep()
-    end)
+    vim.keymap.set("n", "<leader>ps", telescope.live_grep, {})
+    vim.keymap.set("n", "<leader>/", telescope.current_buffer_fuzzy_find, {})
   end,
 }
