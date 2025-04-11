@@ -220,7 +220,15 @@ return {
         },
       })
 
-      require("lspconfig").texlab.setup({})
+      require("lspconfig").texlab.setup({
+        settings = {
+          texlab = {
+            experimental = {
+              labelReferenceCommands = { "mediumref", "fullref" },
+            },
+          },
+        },
+      })
       require("lspconfig").ltex.setup({})
     else
       require("lspconfig").yamlls.setup({
