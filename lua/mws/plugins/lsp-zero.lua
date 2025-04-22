@@ -226,6 +226,7 @@ return {
             experimental = {
               labelReferenceCommands = { "mediumref", "fullref" },
             },
+            formatterLineLength = 120,
           },
         },
       })
