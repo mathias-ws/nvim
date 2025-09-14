@@ -88,20 +88,14 @@ return {
     if nvim_env == "work" then
       mason_lspconfig.setup({
         ensure_installed = {
-          "pyright",
           "ansiblels",
           "yamlls",
-          "gopls",
         },
       })
 
       mason_tool_installer.setup({
         ensure_installed = {
           "prettier",
-          "ruff",
-          "black",
-          "isort",
-          "mypy",
           "ansible-lint",
           "jsonlint",
           "yamllint",
@@ -112,15 +106,11 @@ return {
     else
       mason_lspconfig.setup({
         ensure_installed = {
-          "pyright",
           "ansiblels",
           "lua_ls",
           "yamlls",
           "terraformls",
-          "gopls",
           "bashls",
-          "texlab",
-          "ltex",
         },
       })
 
@@ -128,10 +118,6 @@ return {
         ensure_installed = {
           "prettier",
           "stylua",
-          "ruff",
-          "black",
-          "isort",
-          "mypy",
           "ansible-lint",
           "jsonlint",
           "yamllint",
@@ -140,17 +126,6 @@ return {
         },
       })
     end
-
-    require("lspconfig").pyright.setup({
-      filetypes = { "python" },
-      settings = {
-        python = {
-          analysis = {
-            venvPath = "./venv",
-          },
-        },
-      },
-    })
 
     require("lspconfig").ansiblels.setup({
       filetypes = {
@@ -179,8 +154,6 @@ return {
         },
       },
     })
-
-    require("lspconfig").gopls.setup({})
 
     if nvim_env ~= "work" then
       require("lspconfig").terraformls.setup({
@@ -219,18 +192,6 @@ return {
           },
         },
       })
-
-      require("lspconfig").texlab.setup({
-        settings = {
-          texlab = {
-            experimental = {
-              labelReferenceCommands = { "mediumref", "fullref" },
-            },
-            formatterLineLength = 120,
-          },
-        },
-      })
-      require("lspconfig").ltex.setup({})
     else
       require("lspconfig").yamlls.setup({
         settings = {
